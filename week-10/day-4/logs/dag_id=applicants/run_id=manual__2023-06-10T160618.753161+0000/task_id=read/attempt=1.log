@@ -1,0 +1,68 @@
+[2023-06-10T16:06:20.965+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: applicants.read manual__2023-06-10T16:06:18.753161+00:00 [queued]>
+[2023-06-10T16:06:20.980+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: applicants.read manual__2023-06-10T16:06:18.753161+00:00 [queued]>
+[2023-06-10T16:06:20.984+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2023-06-10T16:06:21.027+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): read> on 2023-06-10 16:06:18.753161+00:00
+[2023-06-10T16:06:21.035+0000] {standard_task_runner.py:57} INFO - Started process 14647 to run task
+[2023-06-10T16:06:21.041+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'applicants', 'read', 'manual__2023-06-10T16:06:18.753161+00:00', '--job-id', '68', '--raw', '--subdir', 'DAGS_FOLDER/etl.py', '--cfg-path', '/tmp/tmppi1antpe']
+[2023-06-10T16:06:21.043+0000] {standard_task_runner.py:85} INFO - Job 68: Subtask read
+[2023-06-10T16:06:21.122+0000] {task_command.py:410} INFO - Running <TaskInstance: applicants.read manual__2023-06-10T16:06:18.753161+00:00 [running]> on host 9e894d1b1662
+[2023-06-10T16:06:21.307+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='applicants' AIRFLOW_CTX_TASK_ID='read' AIRFLOW_CTX_EXECUTION_DATE='2023-06-10T16:06:18.753161+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-06-10T16:06:18.753161+00:00'
+[2023-06-10T16:06:21.309+0000] {python.py:183} INFO - Done. Returned value was:              Name-surname  Age  ... Preffered-language Cognitive-score
+0          Zeeshan Snider   49  ...               Java              18
+1             Amayah Lowe   43  ...               Java              58
+2           Jayda Coombes   41  ...               Java              17
+3            Edith Bowman   41  ...               Java              99
+4              Arya Chang   37  ...               Java               2
+5              Alivia May   46  ...               Java               4
+6             Lemar Ahmad   46  ...               Java              66
+7        Rikesh Bannister   51  ...               Java              85
+8            Samad Castro   56  ...               Java               1
+9             Marie Huber   58  ...               Java               3
+10       Madelaine Mullen   25  ...               Java              63
+11        Alfie-Jay Clegg   52  ...               Java              17
+12          Kaylee Spears   57  ...               Java              53
+13        Sheena Stephens   51  ...             Python              46
+14            Orla Reader   27  ...             Python               1
+15       Olivia-Mae Rivas   57  ...             Python              56
+16  Jamie-Leigh Dickerson   35  ...             Python              73
+17        Yasemin Osborne   38  ...             Python              71
+18              Tj Bonner   23  ...             Python              81
+19            Tessa Dunne   48  ...             Python              61
+20      Cynthia Velasquez   22  ...             Python              56
+21           Violet Plant   39  ...             Python               8
+22           Hibba Santos   23  ...             Python              73
+23        Simona Alvarado   40  ...             Python              91
+24           Sofia Searle   32  ...             Python              73
+25     Harper-Rose Steele   36  ...             Python              86
+26        Beatrice Thorpe   62  ...             Python              66
+27         Herbie Derrick   49  ...             Python              46
+28        Rosemary Lister   62  ...             Python              97
+29            Manal Velez   28  ...             Python              64
+30           Coen Edwards   32  ...             Python              71
+31            April Avery   46  ...             Python              55
+32       Ottilie Valencia   30  ...             Python              15
+33       Lilly-Ann Cooley   41  ...             Python              13
+34          Sumaya Montes   23  ...             Python              83
+35           Shona Ingram   64  ...             Python              90
+36       Inaaya Griffiths   46  ...             Python              26
+37             Luciana Vu   41  ...             Python              72
+38           James Webber   26  ...             Python              96
+39       Muhammad Doherty   27  ...             Python              79
+40         Malachy Clarke   31  ...             Python              73
+41           Devan Waller   30  ...             Python              70
+42        Zahraa Charlton   23  ...         JavaScript              18
+43          Sorcha Hayden   23  ...         JavaScript              91
+44        Shaan Mcdougall   54  ...         JavaScript              93
+45          Aishah Carney   61  ...         JavaScript             100
+46            Macey Casey   52  ...         JavaScript               7
+47          Mindy Shannon   31  ...         JavaScript               6
+48         Ameera Benitez   34  ...         JavaScript               2
+49          Kamal Camacho   23  ...         JavaScript              11
+50          Kamal Camacho   23  ...         JavaScript              11
+51        Zahraa Charlton   23  ...         JavaScript              18
+52         Herbie Derrick   49  ...             Python              46
+
+[53 rows x 5 columns]
+[2023-06-10T16:06:21.420+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=applicants, task_id=read, execution_date=20230610T160618, start_date=20230610T160620, end_date=20230610T160621
+[2023-06-10T16:06:21.454+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2023-06-10T16:06:21.486+0000] {taskinstance.py:2651} INFO - 1 downstream tasks scheduled from follow-on schedule check

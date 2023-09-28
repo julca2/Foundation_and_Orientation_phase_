@@ -1,0 +1,46 @@
+[2023-06-13T14:55:58.871+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: a_etldag.read_transform manual__2023-06-13T14:55:57.269902+00:00 [queued]>
+[2023-06-13T14:55:58.882+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: a_etldag.read_transform manual__2023-06-13T14:55:57.269902+00:00 [queued]>
+[2023-06-13T14:55:58.882+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2023-06-13T14:55:58.902+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): read_transform> on 2023-06-13 14:55:57.269902+00:00
+[2023-06-13T14:55:58.907+0000] {standard_task_runner.py:57} INFO - Started process 4206 to run task
+[2023-06-13T14:55:58.911+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'a_etldag', 'read_transform', 'manual__2023-06-13T14:55:57.269902+00:00', '--job-id', '116', '--raw', '--subdir', 'DAGS_FOLDER/etl.py', '--cfg-path', '/tmp/tmpgbdvbbvb']
+[2023-06-13T14:55:58.912+0000] {standard_task_runner.py:85} INFO - Job 116: Subtask read_transform
+[2023-06-13T14:55:58.971+0000] {task_command.py:410} INFO - Running <TaskInstance: a_etldag.read_transform manual__2023-06-13T14:55:57.269902+00:00 [running]> on host 9e894d1b1662
+[2023-06-13T14:55:59.106+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='a_etldag' AIRFLOW_CTX_TASK_ID='read_transform' AIRFLOW_CTX_EXECUTION_DATE='2023-06-13T14:55:57.269902+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-06-13T14:55:57.269902+00:00'
+[2023-06-13T14:55:59.309+0000] {python.py:183} INFO - Done. Returned value was:              Name-surname  Age  ... Cognitive-score Class-name
+1             Amayah Lowe   43  ...              58   Panthera
+3            Edith Bowman   41  ...              99   Panthera
+6             Lemar Ahmad   46  ...              66   Panthera
+7        Rikesh Bannister   51  ...              85   Panthera
+10       Madelaine Mullen   25  ...              63   Panthera
+12          Kaylee Spears   57  ...              53   Panthera
+15       Olivia-Mae Rivas   57  ...              56    Celadon
+16  Jamie-Leigh Dickerson   35  ...              73    Celadon
+17        Yasemin Osborne   38  ...              71    Celadon
+18              Tj Bonner   23  ...              81    Celadon
+19            Tessa Dunne   48  ...              61    Celadon
+20      Cynthia Velasquez   22  ...              56    Celadon
+22           Hibba Santos   23  ...              73    Celadon
+23        Simona Alvarado   40  ...              91    Celadon
+24           Sofia Searle   32  ...              73    Celadon
+25     Harper-Rose Steele   36  ...              86    Celadon
+26        Beatrice Thorpe   62  ...              66    Celadon
+28        Rosemary Lister   62  ...              97    Celadon
+29            Manal Velez   28  ...              64    Celadon
+30           Coen Edwards   32  ...              71    Celadon
+31            April Avery   46  ...              55    Celadon
+34          Sumaya Montes   23  ...              83    Celadon
+35           Shona Ingram   64  ...              90    Celadon
+37             Luciana Vu   41  ...              72    Celadon
+38           James Webber   26  ...              96    Celadon
+39       Muhammad Doherty   27  ...              79    Celadon
+40         Malachy Clarke   31  ...              73    Celadon
+41           Devan Waller   30  ...              70    Celadon
+43          Sorcha Hayden   23  ...              91    Celadon
+44        Shaan Mcdougall   54  ...              93    Celadon
+45          Aishah Carney   61  ...             100    Celadon
+
+[31 rows x 6 columns]
+[2023-06-13T14:55:59.589+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=a_etldag, task_id=read_transform, execution_date=20230613T145557, start_date=20230613T145558, end_date=20230613T145559
+[2023-06-13T14:55:59.687+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2023-06-13T14:55:59.717+0000] {taskinstance.py:2651} INFO - 1 downstream tasks scheduled from follow-on schedule check

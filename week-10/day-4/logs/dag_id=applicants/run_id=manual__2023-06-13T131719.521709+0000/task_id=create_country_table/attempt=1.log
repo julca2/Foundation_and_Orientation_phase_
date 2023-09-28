@@ -1,0 +1,50 @@
+[2023-06-13T13:17:21.796+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: applicants.create_country_table manual__2023-06-13T13:17:19.521709+00:00 [queued]>
+[2023-06-13T13:17:21.807+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: applicants.create_country_table manual__2023-06-13T13:17:19.521709+00:00 [queued]>
+[2023-06-13T13:17:21.808+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2023-06-13T13:17:21.826+0000] {taskinstance.py:1327} INFO - Executing <Task(MsSqlOperator): create_country_table> on 2023-06-13 13:17:19.521709+00:00
+[2023-06-13T13:17:21.834+0000] {standard_task_runner.py:57} INFO - Started process 2448 to run task
+[2023-06-13T13:17:21.846+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'applicants', 'create_country_table', 'manual__2023-06-13T13:17:19.521709+00:00', '--job-id', '107', '--raw', '--subdir', 'DAGS_FOLDER/etl.py', '--cfg-path', '/tmp/tmph2b0f3od']
+[2023-06-13T13:17:21.847+0000] {standard_task_runner.py:85} INFO - Job 107: Subtask create_country_table
+[2023-06-13T13:17:22.034+0000] {task_command.py:410} INFO - Running <TaskInstance: applicants.create_country_table manual__2023-06-13T13:17:19.521709+00:00 [running]> on host 9e894d1b1662
+[2023-06-13T13:17:22.245+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='applicants' AIRFLOW_CTX_TASK_ID='create_country_table' AIRFLOW_CTX_EXECUTION_DATE='2023-06-13T13:17:19.521709+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-06-13T13:17:19.521709+00:00'
+[2023-06-13T13:17:22.259+0000] {sql.py:262} INFO - Executing: 
+    CREATE TABLE Country (
+        country_id INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+        name TEXT,
+        continent TEXT
+    );
+    
+[2023-06-13T13:17:22.274+0000] {base.py:73} INFO - Using connection ID 'MssqlConn' for task execution.
+[2023-06-13T13:17:22.365+0000] {base.py:73} INFO - Using connection ID 'MssqlConn' for task execution.
+[2023-06-13T13:17:22.385+0000] {sql.py:375} INFO - Running statement: 
+    CREATE TABLE Country (
+        country_id INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+        name TEXT,
+        continent TEXT
+    );
+    , parameters: None
+[2023-06-13T13:17:22.398+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "src/pymssql/_pymssql.pyx", line 459, in pymssql._pymssql.Cursor.execute
+  File "src/pymssql/_mssql.pyx", line 1087, in pymssql._mssql.MSSQLConnection.execute_query
+  File "src/pymssql/_mssql.pyx", line 1118, in pymssql._mssql.MSSQLConnection.execute_query
+  File "src/pymssql/_mssql.pyx", line 1251, in pymssql._mssql.MSSQLConnection.format_and_run_query
+  File "src/pymssql/_mssql.pyx", line 1789, in pymssql._mssql.check_cancel_and_raise
+  File "src/pymssql/_mssql.pyx", line 1835, in pymssql._mssql.raise_MSSQLDatabaseException
+pymssql._mssql.MSSQLDatabaseException: (2714, b"There is already an object named 'Country' in the database.DB-Lib error message 20018, severity 16:\nGeneral SQL Server error: Check messages from the SQL Server\n")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/operators/sql.py", line 274, in execute
+    **extra_kwargs,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/hooks/sql.py", line 349, in run
+    self._run_command(cur, sql_statement, parameters)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/hooks/sql.py", line 380, in _run_command
+    cur.execute(sql_statement)
+  File "src/pymssql/_pymssql.pyx", line 479, in pymssql._pymssql.Cursor.execute
+pymssql._pymssql.OperationalError: (2714, b"There is already an object named 'Country' in the database.DB-Lib error message 20018, severity 16:\nGeneral SQL Server error: Check messages from the SQL Server\n")
+[2023-06-13T13:17:22.407+0000] {taskinstance.py:1350} INFO - Marking task as FAILED. dag_id=applicants, task_id=create_country_table, execution_date=20230613T131719, start_date=20230613T131721, end_date=20230613T131722
+[2023-06-13T13:17:22.422+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 107 for task create_country_table ((2714, b"There is already an object named 'Country' in the database.DB-Lib error message 20018, severity 16:\nGeneral SQL Server error: Check messages from the SQL Server\n"); 2448)
+[2023-06-13T13:17:22.451+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2023-06-13T13:17:22.472+0000] {taskinstance.py:2651} INFO - 0 downstream tasks scheduled from follow-on schedule check

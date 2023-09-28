@@ -1,0 +1,32 @@
+[2023-06-09T16:04:51.107+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: applicants.load manual__2023-06-09T16:04:44.702143+00:00 [queued]>
+[2023-06-09T16:04:51.117+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: applicants.load manual__2023-06-09T16:04:44.702143+00:00 [queued]>
+[2023-06-09T16:04:51.118+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2023-06-09T16:04:51.137+0000] {taskinstance.py:1327} INFO - Executing <Task(MsSqlOperator): load> on 2023-06-09 16:04:44.702143+00:00
+[2023-06-09T16:04:51.146+0000] {standard_task_runner.py:57} INFO - Started process 9566 to run task
+[2023-06-09T16:04:51.153+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'applicants', 'load', 'manual__2023-06-09T16:04:44.702143+00:00', '--job-id', '49', '--raw', '--subdir', 'DAGS_FOLDER/etl.py', '--cfg-path', '/tmp/tmpbbo6xk0h']
+[2023-06-09T16:04:51.154+0000] {standard_task_runner.py:85} INFO - Job 49: Subtask load
+[2023-06-09T16:04:51.227+0000] {task_command.py:410} INFO - Running <TaskInstance: applicants.load manual__2023-06-09T16:04:44.702143+00:00 [running]> on host 9e894d1b1662
+[2023-06-09T16:04:51.354+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='applicants' AIRFLOW_CTX_TASK_ID='load' AIRFLOW_CTX_EXECUTION_DATE='2023-06-09T16:04:44.702143+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-06-09T16:04:44.702143+00:00'
+[2023-06-09T16:04:51.356+0000] {sql.py:262} INFO - Executing: 
+        INSERT INTO applicants (Id, [name and surname], age, adress, [preffered language], [cognitive score]) values(?,?,?,?,?,?)",
+                               x+1, row['Name-surname'],row['Age'], row['Adress'], row['Preffered-language'], row['Cognitive score'], row['Preffered-language'])
+                              
+[2023-06-09T16:04:51.386+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/operators/sql.py", line 263, in execute
+    hook = self.get_db_hook()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/operators/sql.py", line 181, in get_db_hook
+    return self._hook
+  File "/home/airflow/.local/lib/python3.7/site-packages/cached_property.py", line 36, in __get__
+    value = obj.__dict__[self.func.__name__] = self.func(obj)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/operators/sql.py", line 143, in _hook
+    conn = BaseHook.get_connection(self.conn_id)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/hooks/base.py", line 72, in get_connection
+    conn = Connection.get_connection_from_secrets(conn_id)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/connection.py", line 434, in get_connection_from_secrets
+    raise AirflowNotFoundException(f"The conn_id `{conn_id}` isn't defined")
+airflow.exceptions.AirflowNotFoundException: The conn_id `***MssqlConn` isn't defined
+[2023-06-09T16:04:51.397+0000] {taskinstance.py:1350} INFO - Marking task as FAILED. dag_id=applicants, task_id=load, execution_date=20230609T160444, start_date=20230609T160451, end_date=20230609T160451
+[2023-06-09T16:04:51.418+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 49 for task load (The conn_id `***MssqlConn` isn't defined; 9566)
+[2023-06-09T16:04:51.445+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2023-06-09T16:04:51.472+0000] {taskinstance.py:2651} INFO - 0 downstream tasks scheduled from follow-on schedule check

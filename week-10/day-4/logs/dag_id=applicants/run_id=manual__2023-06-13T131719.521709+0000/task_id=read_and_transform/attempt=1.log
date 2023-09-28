@@ -1,0 +1,68 @@
+[2023-06-13T13:17:21.747+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: applicants.read_and_transform manual__2023-06-13T13:17:19.521709+00:00 [queued]>
+[2023-06-13T13:17:21.756+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: applicants.read_and_transform manual__2023-06-13T13:17:19.521709+00:00 [queued]>
+[2023-06-13T13:17:21.757+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2023-06-13T13:17:21.775+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): read_and_transform> on 2023-06-13 13:17:19.521709+00:00
+[2023-06-13T13:17:21.784+0000] {standard_task_runner.py:57} INFO - Started process 2447 to run task
+[2023-06-13T13:17:21.799+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'applicants', 'read_and_transform', 'manual__2023-06-13T13:17:19.521709+00:00', '--job-id', '106', '--raw', '--subdir', 'DAGS_FOLDER/etl.py', '--cfg-path', '/tmp/tmpgnymcltx']
+[2023-06-13T13:17:21.800+0000] {standard_task_runner.py:85} INFO - Job 106: Subtask read_and_transform
+[2023-06-13T13:17:21.926+0000] {task_command.py:410} INFO - Running <TaskInstance: applicants.read_and_transform manual__2023-06-13T13:17:19.521709+00:00 [running]> on host 9e894d1b1662
+[2023-06-13T13:17:22.180+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='applicants' AIRFLOW_CTX_TASK_ID='read_and_transform' AIRFLOW_CTX_EXECUTION_DATE='2023-06-13T13:17:19.521709+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-06-13T13:17:19.521709+00:00'
+[2023-06-13T13:17:22.331+0000] {python.py:183} INFO - Done. Returned value was:              Name-surname  Age  ... Cognitive-score Class-name
+0          Zeeshan Snider   49  ...              18   Panthera
+1             Amayah Lowe   43  ...              58   Panthera
+2           Jayda Coombes   41  ...              17   Panthera
+3            Edith Bowman   41  ...              99   Panthera
+4              Arya Chang   37  ...               2   Panthera
+5              Alivia May   46  ...               4   Panthera
+6             Lemar Ahmad   46  ...              66   Panthera
+7        Rikesh Bannister   51  ...              85   Panthera
+8            Samad Castro   56  ...               1   Panthera
+9             Marie Huber   58  ...               3   Panthera
+10       Madelaine Mullen   25  ...              63   Panthera
+11        Alfie-Jay Clegg   52  ...              17   Panthera
+12          Kaylee Spears   57  ...              53   Panthera
+13        Sheena Stephens   51  ...              46    Celadon
+14            Orla Reader   27  ...               1    Celadon
+15       Olivia-Mae Rivas   57  ...              56    Celadon
+16  Jamie-Leigh Dickerson   35  ...              73    Celadon
+17        Yasemin Osborne   38  ...              71    Celadon
+18              Tj Bonner   23  ...              81    Celadon
+19            Tessa Dunne   48  ...              61    Celadon
+20      Cynthia Velasquez   22  ...              56    Celadon
+21           Violet Plant   39  ...               8    Celadon
+22           Hibba Santos   23  ...              73    Celadon
+23        Simona Alvarado   40  ...              91    Celadon
+24           Sofia Searle   32  ...              73    Celadon
+25     Harper-Rose Steele   36  ...              86    Celadon
+26        Beatrice Thorpe   62  ...              66    Celadon
+27         Herbie Derrick   49  ...              46    Celadon
+28        Rosemary Lister   62  ...              97    Celadon
+29            Manal Velez   28  ...              64    Celadon
+30           Coen Edwards   32  ...              71    Celadon
+31            April Avery   46  ...              55    Celadon
+32       Ottilie Valencia   30  ...              15    Celadon
+33       Lilly-Ann Cooley   41  ...              13    Celadon
+34          Sumaya Montes   23  ...              83    Celadon
+35           Shona Ingram   64  ...              90    Celadon
+36       Inaaya Griffiths   46  ...              26    Celadon
+37             Luciana Vu   41  ...              72    Celadon
+38           James Webber   26  ...              96    Celadon
+39       Muhammad Doherty   27  ...              79    Celadon
+40         Malachy Clarke   31  ...              73    Celadon
+41           Devan Waller   30  ...              70    Celadon
+42        Zahraa Charlton   23  ...              18    Celadon
+43          Sorcha Hayden   23  ...              91    Celadon
+44        Shaan Mcdougall   54  ...              93    Celadon
+45          Aishah Carney   61  ...             100    Celadon
+46            Macey Casey   52  ...               7    Celadon
+47          Mindy Shannon   31  ...               6    Celadon
+48         Ameera Benitez   34  ...               2    Celadon
+49          Kamal Camacho   23  ...              11    Celadon
+50          Kamal Camacho   23  ...              11    Celadon
+51        Zahraa Charlton   23  ...              18    Celadon
+52         Herbie Derrick   49  ...              46    Celadon
+
+[53 rows x 6 columns]
+[2023-06-13T13:17:22.446+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=applicants, task_id=read_and_transform, execution_date=20230613T131719, start_date=20230613T131721, end_date=20230613T131722
+[2023-06-13T13:17:22.499+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2023-06-13T13:17:22.518+0000] {taskinstance.py:2651} INFO - 0 downstream tasks scheduled from follow-on schedule check

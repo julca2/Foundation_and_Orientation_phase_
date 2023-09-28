@@ -1,0 +1,45 @@
+[2023-06-10T16:08:46.207+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: applicants.load manual__2023-06-10T16:08:39.557268+00:00 [queued]>
+[2023-06-10T16:08:46.217+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: applicants.load manual__2023-06-10T16:08:39.557268+00:00 [queued]>
+[2023-06-10T16:08:46.218+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2023-06-10T16:08:46.238+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): load> on 2023-06-10 16:08:39.557268+00:00
+[2023-06-10T16:08:46.246+0000] {standard_task_runner.py:57} INFO - Started process 14722 to run task
+[2023-06-10T16:08:46.250+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'applicants', 'load', 'manual__2023-06-10T16:08:39.557268+00:00', '--job-id', '73', '--raw', '--subdir', 'DAGS_FOLDER/etl.py', '--cfg-path', '/tmp/tmpho9lm6o1']
+[2023-06-10T16:08:46.251+0000] {standard_task_runner.py:85} INFO - Job 73: Subtask load
+[2023-06-10T16:08:46.311+0000] {task_command.py:410} INFO - Running <TaskInstance: applicants.load manual__2023-06-10T16:08:39.557268+00:00 [running]> on host 9e894d1b1662
+[2023-06-10T16:08:46.415+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='applicants' AIRFLOW_CTX_TASK_ID='load' AIRFLOW_CTX_EXECUTION_DATE='2023-06-10T16:08:39.557268+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-06-10T16:08:39.557268+00:00'
+[2023-06-10T16:08:46.426+0000] {base.py:73} INFO - Using connection ID 'MssqlConn' for task execution.
+[2023-06-10T16:08:46.479+0000] {sql.py:375} INFO - Running statement: 
+        INSERT INTO applicants (name_and_surname, age, adress, preffered_language, cognitive_score) values(?,?,?,?,?),
+                               row.Name-surname,row.[Age], row.[Adress], row.[Preffered-language], row.[Cognitive-score],row.[Preffered-language])
+        , parameters: None
+[2023-06-10T16:08:46.489+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "src/pymssql/_pymssql.pyx", line 459, in pymssql._pymssql.Cursor.execute
+  File "src/pymssql/_mssql.pyx", line 1087, in pymssql._mssql.MSSQLConnection.execute_query
+  File "src/pymssql/_mssql.pyx", line 1118, in pymssql._mssql.MSSQLConnection.execute_query
+  File "src/pymssql/_mssql.pyx", line 1251, in pymssql._mssql.MSSQLConnection.format_and_run_query
+  File "src/pymssql/_mssql.pyx", line 1789, in pymssql._mssql.check_cancel_and_raise
+  File "src/pymssql/_mssql.pyx", line 1835, in pymssql._mssql.raise_MSSQLDatabaseException
+pymssql._mssql.MSSQLDatabaseException: (102, b"Incorrect syntax near '?'.DB-Lib error message 20018, severity 15:\nGeneral SQL Server error: Check messages from the SQL Server\n")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 181, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 198, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/etl.py", line 89, in load
+    return hook.get_records(sql)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/hooks/sql.py", line 235, in get_records
+    return self.run(sql=sql, parameters=parameters, handler=fetch_all_handler)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/hooks/sql.py", line 349, in run
+    self._run_command(cur, sql_statement, parameters)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/hooks/sql.py", line 380, in _run_command
+    cur.execute(sql_statement)
+  File "src/pymssql/_pymssql.pyx", line 476, in pymssql._pymssql.Cursor.execute
+pymssql._pymssql.ProgrammingError: (102, b"Incorrect syntax near '?'.DB-Lib error message 20018, severity 15:\nGeneral SQL Server error: Check messages from the SQL Server\n")
+[2023-06-10T16:08:46.523+0000] {taskinstance.py:1350} INFO - Marking task as FAILED. dag_id=applicants, task_id=load, execution_date=20230610T160839, start_date=20230610T160846, end_date=20230610T160846
+[2023-06-10T16:08:46.546+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 73 for task load ((102, b"Incorrect syntax near '?'.DB-Lib error message 20018, severity 15:\nGeneral SQL Server error: Check messages from the SQL Server\n"); 14722)
+[2023-06-10T16:08:46.583+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2023-06-10T16:08:46.616+0000] {taskinstance.py:2651} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+body {
+    font-family: 'Indie Flower', cursive;
+    background-image: url(https://www.toptal.com/designers/subtlepatterns/uploads/topography.png);
+    margin: 0% 0%;
+}
+
+
+nav{
+    color: #ff0099;
+    background-color: #333333;
+    margin:0%;
+    font-size: 30px;
+    text-align: right;
+    padding: 10px 10% 0% 10%;
+    height: 65px;
+}
+#main {
+    padding: 10%;
+}
+#imgl{
+    position: absolute;
+    margin: 0%;
+    padding: 0%;
+    clear: both;
+}
+
+#references{
+text-align: right;
+}
+
+#subtitle{
+    margin: 0%;
+    padding: 0%;
+    color: #ff0099;
+}
+
+h1 {
+    font-size: 60px;
+    margin: 0%;
+    
+}
+#wiki h2{
+    text-align: center;
+    font-size: 40px;
+}
+article h3{
+    font-size: 25px;
+}
+
+.separator::before {
+    content: '-    -    -';
+    display: block;
+    text-align: center;
+    font-size: 40px;
+}
+a {
+    margin:20px;
+}

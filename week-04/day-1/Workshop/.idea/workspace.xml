@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c39f6d35-9e22-449c-9089-02b8f6fa54ef" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AircraftCarrier/Aircrafts.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AircraftCarrier/Carrier.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AircraftCarrier/F16.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AircraftCarrier/F35.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AircraftCarrier/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GardenApplication/Flower.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GardenApplication/Garden.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GardenApplication/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GardenApplication/Plants.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GardenApplication/Tree.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GreenFoxOrganization/Cohort.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GreenFoxOrganization/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GreenFoxOrganization/Mentor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GreenFoxOrganization/Person.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GreenFoxOrganization/Sponsor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GreenFoxOrganization/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Wardrobe/Cloth.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Wardrobe/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Wardrobe/Overwear.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Wardrobe/Underwear.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Wardrobe/Wardrobe.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="2OuMw7eve7rikyB5RpPOePMqCyk" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/julca/Desktop/GFA/MR today 25.4/src/Main.java&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c39f6d35-9e22-449c-9089-02b8f6fa54ef" name="Changes" comment="" />
+      <created>1682406250101</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1682406250101</updated>
+    </task>
+    <servers />
+  </component>
+</project>

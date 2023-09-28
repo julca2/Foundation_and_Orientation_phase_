@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+body {
+    font-family: 'Indie Flower';
+    background-image: url(https://img.freepik.com/free-photo/modern-geometrical-wallpaper-with-round-lines_23-2148811528.jpg?w=996&t=st=1684686140~exp=1684686740~hmac=d4fb20459f4029d6309f051c6893cc24ab7d8bd505ed9710cfc04a6525674f92);
+    margin: 5% 5%;
+}
+
+nav{
+
+    font-size: 30px;
+    text-align: center;
+    height: 65px;
+}
+
+input {
+    margin-right: 100px;
+}
+h1 {
+    font-size: 60px;
+    margin: 0%;
+    color: cyan;
+}
+
+hr.solid{
+    border-top: 5px solid;
+    color: cyan;
+}
